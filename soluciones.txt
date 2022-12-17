@@ -29,3 +29,26 @@ fi
 
 ===================================================
 
+3)
+read -p "Introduce una nota: " nota
+if [ $nota -lt 5 ] && [ $nota -gt 0 ]
+then 
+echo "Suspes"
+else 
+if [ $nota -lt 6 ]
+then 
+echo "Aprovado"
+else 
+if [ $nota -lt 7 ]
+then
+echo "Be"
+else
+if [ $nota -gt 6 ] && [ $nota -lt 9 ] 
+then
+echo "Notable"
+else 
+echo "Excelent"
+fi
+fi
+fi
+fi
