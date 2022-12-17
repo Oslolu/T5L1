@@ -61,3 +61,32 @@ for ((i=0; i<=$num; i++))
 do
 echo $i
 done
+
+========================================================
+
+5)
+#!/bin/bash
+
+sum=0
+compt=0
+
+echo -n "Introduce un numero (0 para finalizar): "
+read value
+
+while [ $value -ne 0 ]; do
+  sum=$((sum + value))
+  compt=$((compt + 1))
+
+  echo -n "Introduce un valor (0 para quitar): "
+  read value
+done
+
+
+if [ $compt -ne 0 ]; then
+  avg=$((sum / compt))
+else
+  avg=0
+fi
+
+echo "Total sum: $sum"
+echo "Promedio: $avg"
