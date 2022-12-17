@@ -90,3 +90,26 @@ fi
 
 echo "Total sum: $sum"
 echo "Promedio: $avg"
+
+========================================================
+
+6)
+#!/bin/bash
+
+read -p "Introdueix la quantitat de litres d'aigua consumits: " litres
+
+cost=0
+
+if [ $litres -lt 50 ]
+then
+  cost=20
+
+elif [ $litres -lt 200 ]
+then
+  cost=$((litres20))
+
+else
+  cost=$((litres10))
+fi
+
+echo "Coste Total: $cost euros"
